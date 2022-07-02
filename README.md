@@ -53,7 +53,9 @@ If no recognized module system is present, access bundle contents via the global
 ```html
 <script type="text/javascript">
 (function () {
+(function () {
     window.incrcount;
+})();
 })();
 </script>
 ```
@@ -104,6 +106,7 @@ count = accumulator();
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-count@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
+(function () {
 
 var accumulator;
 var v;
@@ -119,6 +122,7 @@ for ( i = 0; i < 100; i++ ) {
 }
 console.log( accumulator() );
 
+})();
 })();
 </script>
 </body>
@@ -216,11 +220,11 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/stats/incr/mean]: https://github.com/stdlib-js/stats-incr-mean/tree/umd
+[@stdlib/stats/incr/mean]: https://github.com/stdlib-js/stats-incr-mean/tree/umd/tree/umd
 
-[@stdlib/stats/incr/sum]: https://github.com/stdlib-js/stats-incr-sum/tree/umd
+[@stdlib/stats/incr/sum]: https://github.com/stdlib-js/stats-incr-sum/tree/umd/tree/umd
 
-[@stdlib/stats/incr/summary]: https://github.com/stdlib-js/stats-incr-summary/tree/umd
+[@stdlib/stats/incr/summary]: https://github.com/stdlib-js/stats-incr-summary/tree/umd/tree/umd
 
 <!-- </related-links> -->
 
