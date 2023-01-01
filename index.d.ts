@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,36 +16,41 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
 /**
-* Compute a count incrementally.
+* If provided a value, returns an updated count; otherwise, returns the current count.
 *
-* @module @stdlib/stats-incr-count
+* @param x - value
+* @returns count
+*/
+type accumulator = ( x?: number ) => number | null;
+
+/**
+* Returns an accumulator function which incrementally computes a count.
+*
+* @returns accumulator function
 *
 * @example
-* var incrcount = require( '@stdlib/stats-incr-count' );
-*
 * var accumulator = incrcount();
 *
-* var count = accumulator();
-* // returns 0
+* var v = accumulator();
+* // returns null
 *
-* count = accumulator( 2.0 );
+* v = accumulator( 2.0 );
 * // returns 1
 *
-* count = accumulator( -5.0 );
+* v = accumulator( -5.0 );
 * // returns 2
 *
-* count = accumulator();
+* v = accumulator();
 * // returns 2
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function incrcount(): accumulator;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = incrcount;
